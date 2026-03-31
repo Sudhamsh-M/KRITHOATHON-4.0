@@ -24,7 +24,7 @@ export default function WaitlistButton({ variant = 'nav' }) {
     >
       <span className="btn-waitlist__glow" />
       <span className={`btn-waitlist__inner ${isNav ? 'btn-waitlist__inner--nav' : 'btn-waitlist__inner--cta'}`}>
-        Join Waitlist
+        Register
       </span>
     </button>
   )

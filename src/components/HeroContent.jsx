@@ -35,7 +35,7 @@ export default function HeroContent() {
 
       {/* Heading */}
       <h1 className="hero-heading" id="heroHeading">
-        Web3 at the Speed of Experience
+        Get ready for Krithoathon 4.0
       </h1>
 
       {/* Subtitle */}
