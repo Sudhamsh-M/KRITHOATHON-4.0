@@ -14,6 +14,7 @@ export default function WaitlistButton({ variant = 'nav' }) {
   }, [])
 
   const isNav = variant === 'nav'
+  const label = isNav ? 'Register' : 'Get Problem Statements'
 
   return (
     <button
@@ -24,7 +25,7 @@ export default function WaitlistButton({ variant = 'nav' }) {
     >
       <span className="btn-waitlist__glow" />
       <span className={`btn-waitlist__inner ${isNav ? 'btn-waitlist__inner--nav' : 'btn-waitlist__inner--cta'}`}>
-        Register
+        {label}
       </span>
     </button>
   )
