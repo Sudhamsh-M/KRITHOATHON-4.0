@@ -1,0 +1,117 @@
+/* ============================================
+   HERO CONTENT
+   ============================================ */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+  padding: 0 24px;
+}
+
+/* ===== Badge Pill ===== */
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(167,139,250,0.1), rgba(34,211,238,0.08));
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  opacity: 0;
+  animation: fadeInUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.4s forwards;
+}
+
+.badge-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-violet);
+  flex-shrink: 0;
+}
+
+.badge-text {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.badge-date {
+  font-size: 13px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* ===== Hero Heading ===== */
+.hero-heading {
+  max-width: 613px;
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 1.28;
+  background: linear-gradient(
+    144.5deg,
+    #ffffff 10%,
+    var(--color-violet) 48%,
+    var(--color-cyan) 72%,
+    rgba(0, 0, 0, 0) 115%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.55s forwards;
+}
+
+/* ===== Hero Subtitle ===== */
+.hero-subtitle {
+  max-width: 680px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: -16px;
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.7s forwards;
+}
+
+/* ===== CTA Button entry ===== */
+.hero-content > .btn-waitlist--cta {
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.85s forwards;
+}
+
+/* ============================================
+   SHARED ANIMATION
+   ============================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 36px;
+  }
+  .hero-subtitle {
+    font-size: 14px;
+  }
+  .hero-content {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-heading {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,91 @@
+/* ============================================
+   WAITLIST BUTTONS
+   ============================================ */
+.btn-waitlist {
+  position: relative;
+  border-radius: 9999px;
+  padding: 0;
+  background: transparent;
+  overflow: hidden;
+  transition: transform 0.15s ease;
+}
+
+/* Glow streak on top */
+.btn-waitlist__glow {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 14px;
+  pointer-events: none;
+  z-index: 1;
+  filter: blur(3px);
+}
+
+/* ===== NAV variant: multicolor border glow, dark fill ===== */
+.btn-waitlist--nav {
+  border: 0.6px solid rgba(167, 139, 250, 0.4);
+  background: linear-gradient(135deg, rgba(167,139,250,0.08), rgba(34,211,238,0.08));
+}
+
+.btn-waitlist--nav .btn-waitlist__glow {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(167, 139, 250, 0.5) 0%,
+    rgba(34, 211, 238, 0.15) 50%,
+    transparent 80%
+  );
+}
+
+.btn-waitlist__inner--nav {
+  display: block;
+  padding: 11px 29px;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  position: relative;
+  z-index: 2;
+  transition: background 0.25s ease;
+}
+
+.btn-waitlist--nav:hover .btn-waitlist__inner--nav {
+  background: rgba(20, 15, 30, 0.9);
+}
+
+/* ===== CTA variant: multicolor gradient border, white fill ===== */
+.btn-waitlist--cta {
+  border: none;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--color-violet), var(--color-cyan), var(--color-teal));
+}
+
+.btn-waitlist--cta .btn-waitlist__glow {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(167, 139, 250, 0.2) 50%,
+    transparent 80%
+  );
+}
+
+.btn-waitlist__inner--cta {
+  display: block;
+  padding: 11px 29px;
+  border-radius: 9999px;
+  background: #ffffff;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  position: relative;
+  z-index: 2;
+  transition: background 0.25s ease;
+}
+
+.btn-waitlist--cta:hover .btn-waitlist__inner--cta {
+  background: #f0f0f0;
+}

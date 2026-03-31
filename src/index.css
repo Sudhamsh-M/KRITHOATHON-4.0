@@ -1,0 +1,55 @@
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Multicolor palette */
+  --color-violet: #a78bfa;
+  --color-purple: #c084fc;
+  --color-fuchsia: #e879f9;
+  --color-pink: #f472b6;
+  --color-rose: #fb7185;
+  --color-cyan: #22d3ee;
+  --color-teal: #2dd4bf;
+  --color-blue: #60a5fa;
+  --color-indigo: #818cf8;
+  --color-amber: #fbbf24;
+  
+  /* Gradient combos */
+  --gradient-primary: linear-gradient(135deg, var(--color-violet), var(--color-cyan), var(--color-teal));
+  --gradient-heading: linear-gradient(144.5deg, #ffffff 10%, var(--color-violet) 45%, var(--color-cyan) 70%, rgba(0,0,0,0) 115%);
+  --gradient-badge: linear-gradient(135deg, rgba(167,139,250,0.15), rgba(34,211,238,0.15));
+  --gradient-glow: linear-gradient(135deg, var(--color-violet), var(--color-fuchsia), var(--color-cyan));
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'General Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #000000;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  background: none;
+}
