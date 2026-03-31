@@ -1,1 +1,5 @@
 /* App-level styles — empty, all styles in component CSS */
+#root {
+  position: relative;
+  z-index: 1;
+}
