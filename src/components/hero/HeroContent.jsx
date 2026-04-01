@@ -44,8 +44,17 @@ export default function HeroContent() {
 
       {/* Subtitle */}
       <p className="hero-subtitle" id="heroSubtitle">
-        KRITHOATHON 4.0 – Innovate. Impact. Inspire.
-Hosted by Krithomedh, the technical club of AIML & IoT at VNRVJIET, this edition goes beyond coding to challenge diverse teams to solve real-world problems. Collaborate, create, and compete with industry experts as you push boundaries and craft solutions that matter.
+        <span className="hero-subtitle-line">
+          KRITHOATHON 4.0 – Innovate. Impact. Inspire.
+        </span>
+        <span className="hero-subtitle-line">
+          Hosted by Krithomedh, the technical club of  (AIML & IoT), R&AI at VNRVJIET,
+        </span>
+        <span className="hero-subtitle-line">
+          this edition goes beyond coding to challenge diverse teams to solve real-world problems.
+          <br />
+          Collaborate, create, and compete with industry experts as you push boundaries and craft solutions that matter.
+        </span>
 
       </p>
 

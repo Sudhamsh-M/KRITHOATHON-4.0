@@ -27,6 +27,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
+  transform: translateX(-52px);
 }
 
 .footer-accent {
@@ -121,6 +122,13 @@
 .footer-phone {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.footer-phone:hover {
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 0 0 10px rgba(248, 113, 113, 0.35);
 }
 
 .footer-right {
@@ -207,6 +215,26 @@
   line-height: 1.4;
 }
 
+@media (max-width: 900px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .footer-left {
+    transform: none;
+  }
+
+  .footer-right {
+    align-items: flex-start;
+  }
+
+  .footer-logo-card {
+    margin-right: 0;
+    align-self: flex-start;
+  }
+}
+
 @media (max-width: 600px) {
   .site-footer {
     padding: 44px 18px 56px;
@@ -218,20 +246,21 @@
   }
 
   .footer-right {
-    align-items: flex-start;
+    align-items: center;
   }
 
   .faculty-grid {
     grid-template-columns: 1fr;
-    justify-items: flex-start;
+    justify-items: center;
   }
 
   .faculty-card {
-    text-align: left;
+    text-align: center;
   }
 
   .faculty-photo {
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .footer-title {

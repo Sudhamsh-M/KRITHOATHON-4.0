@@ -85,7 +85,9 @@ export default function Footer() {
                 {coordinators.map((person) => (
                   <li key={person.name}>
                     <span className="footer-name">{person.name}</span>
-                    <span className="footer-phone">+91 {person.phone}</span>
+                    <a className="footer-phone" href={`tel:+91${person.phone}`}>
+                      +91 {person.phone}
+                    </a>
                   </li>
                 ))}
               </ul>

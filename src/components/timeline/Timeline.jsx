@@ -147,11 +147,19 @@ function Dot({ active, visible }) {
 export default function Timeline() {
   const [visSet, setVisSet]     = useState(new Set());
   const [activeIdx, setActiveIdx] = useState(-1);
-  const rowRefs = useRef([]);
+  const rowRefsDesktop = useRef([]);
+  const rowRefsMobile = useRef([]);
 
   useEffect(() => {
-    const obs = rowRefs.current.map((el, i) => {
-      if (!el) return null;
+    const entries = [];
+    rowRefsDesktop.current.forEach((el, i) => {
+      if (el) entries.push({ el, i });
+    });
+    rowRefsMobile.current.forEach((el, i) => {
+      if (el) entries.push({ el, i });
+    });
+
+    const obs = entries.map(({ el, i }) => {
       const o = new IntersectionObserver(([entry]) => {
         if (entry.isIntersecting) {
           setTimeout(() => {
@@ -163,14 +171,34 @@ export default function Timeline() {
       o.observe(el);
       return o;
     });
+
     return () => obs.forEach(o => o?.disconnect());
   }, []);
 
   return (
-    <section style={{ background:"#080000", position:"relative", overflow:"hidden", padding:"80px 16px 100px" }}>
+    <section className="timeline-section" style={{ background:"#080000", position:"relative", overflow:"hidden" }}>
 
       {/* ── CSS ANIMATIONS ── */}
       <style>{`
+        .timeline-section { padding: 80px 16px 100px; }
+        .timeline-desktop { display: block; }
+        .timeline-mobile { display: none; position: relative; padding-left: 40px; }
+        .timeline-header { text-align: center; margin-bottom: 72px; }
+        @media (max-width: 700px) {
+          .timeline-section { padding: 64px 14px 80px; }
+          .timeline-header { margin-bottom: 52px; }
+        }
+        @media (max-width: 480px) {
+          .timeline-section { padding: 52px 12px 64px; }
+          .timeline-header { margin-bottom: 44px; }
+        }
+        @media (max-width: 900px) {
+          .timeline-desktop { display: none; }
+          .timeline-mobile { display: block; }
+        }
+        @media (max-width: 600px) {
+          .timeline-mobile { padding-left: 28px; }
+        }
         @keyframes driftA {
           0%  { transform:translate(0,0) scale(1); }
           33% { transform:translate(70px,-45px) scale(1.16); }
@@ -265,7 +293,7 @@ export default function Timeline() {
       <div style={{ position:"relative",zIndex:1,maxWidth:1080,margin:"0 auto" }}>
 
         {/* Header */}
-        <div style={{ textAlign:"center",marginBottom:72 }}>
+        <div className="timeline-header">
           <p style={{ fontFamily:"monospace",fontSize:11,letterSpacing:"0.28em",textTransform:"uppercase",color:"rgba(248,113,113,.55)",marginBottom:14 }}>
             Schedule of Events
           </p>
@@ -279,7 +307,7 @@ export default function Timeline() {
 
         {/* ═══ DESKTOP: 3-col CSS Grid ═══ */}
         <div
-          className="hidden md:block"
+          className="timeline-desktop"
           style={{ position:"relative" }}
         >
           {/* Ghost spine — full height background track */}
@@ -299,7 +327,7 @@ export default function Timeline() {
             return (
               <div
                 key={ev.id}
-                ref={el => (rowRefs.current[i] = el)}
+                ref={el => (rowRefsDesktop.current[i] = el)}
                 style={{
                   display:"grid",
                   gridTemplateColumns:"1fr 60px 1fr",
@@ -375,8 +403,7 @@ export default function Timeline() {
 
         {/* ═══ MOBILE: left-spine single column ═══ */}
         <div
-          className="md:hidden"
-          style={{ position:"relative", paddingLeft:40 }}
+          className="timeline-mobile"
         >
           {/* Spine */}
           <div style={{
@@ -391,7 +418,7 @@ export default function Timeline() {
             return (
               <div
                 key={ev.id}
-                ref={el => { if (!rowRefs.current[i]) rowRefs.current[i] = el; }}
+                ref={el => { rowRefsMobile.current[i] = el; }}
                 style={{ position:"relative", marginBottom: i < timelineEvents.length - 1 ? 36 : 0 }}
               >
                 {/* Dot on spine */}

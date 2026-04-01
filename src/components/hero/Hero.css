@@ -73,8 +73,8 @@
    ============================================ */
 @media (max-width: 768px) {
   .hero-main {
-    padding-top: 200px;
-    padding-bottom: 60px;
+    padding-top: 220px;
+    padding-bottom: 20px;
   }
 
   .ambient-orb {
@@ -88,13 +88,13 @@
 
 @media (max-width: 480px) {
   .hero-main {
-    padding-top: 180px;
+    padding-top: 210px;
     /* Extra Fix: Tighter padding for small mobile screens */
-    padding-bottom: 20px;
+    padding-bottom: 0;
   }
   
   .hero-section {
-    /* Ensures height is strictly forced on small phones */
-    height: 100dvh;
+    /* Allow content to define height to reduce empty space */
+    min-height: 92dvh;
   }
 }

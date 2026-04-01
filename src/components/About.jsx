@@ -18,7 +18,7 @@ export default function AboutKrithomedh() {
           <h2 className="about-title">ABOUT US</h2>
 
           <p className="about-text primary">
-            Krithomedh is a student-driven technical club of department of AIML & IOT in VNRVJIET dedicated to exploring and advancing the field of Artificial Intelligence and Machine Learning.We conduct workshops, hands-on coding sessions and project-based learning focused on AI, ML, deep learning, and data-driven technologies.
+            Krithomedh is a student-driven technical club of department of CSE- (AIML & IoT), R&AI in VNRVJIET dedicated to exploring and advancing the field of Artificial Intelligence and Machine Learning.We conduct workshops, hands-on coding sessions and project-based learning focused on AI, ML, deep learning, and data-driven technologies.
           </p>
 
           <p className="about-text secondary">
