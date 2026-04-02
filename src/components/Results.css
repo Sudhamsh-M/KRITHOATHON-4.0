@@ -33,8 +33,9 @@
 .results-back-button {
   display: inline-block;
   padding: 12px 32px;
-  background: linear-gradient(135deg, rgba(167, 139, 250, 0.2), rgba(34, 211, 238, 0.15));
-  border: 1px solid rgba(167, 139, 250, 0.4);
+  background: rgba(35, 10, 0, 0.85);
+  border: 1px solid rgba(255, 80, 40, 0.6);
+  box-shadow: 0 0 20px rgba(255, 60, 0, 0.4), inset 0 0 10px rgba(255, 160, 0, 0.2);
   color: #ffffff;
   font-size: 14px;
   font-weight: 500;
@@ -45,8 +46,9 @@
 }
 
 .results-back-button:hover {
-  background: linear-gradient(135deg, rgba(167, 139, 250, 0.3), rgba(34, 211, 238, 0.25));
-  border-color: rgba(167, 139, 250, 0.6);
+  background: rgba(45, 15, 0, 0.9);
+  border-color: rgba(255, 80, 40, 0.8);
+  box-shadow: 0 0 25px rgba(255, 60, 0, 0.5), inset 0 0 15px rgba(255, 160, 0, 0.3);
 }
 
 @keyframes fadeIn {

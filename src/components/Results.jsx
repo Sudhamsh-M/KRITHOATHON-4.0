@@ -8,7 +8,7 @@ export default function Results() {
     <div className="results-container">
       <div className="results-content">
         <h1 className="results-heading">COMING SOON</h1>
-        <p className="results-subtitle">Results will be announced shortly</p>
+        <p className="results-subtitle">Results will be announced after Round 1</p>
         
         <button 
           className="results-back-button"
