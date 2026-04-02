@@ -77,7 +77,7 @@ export default function PastEditions() {
   return (
     <div
       style={{
-        paddingTop: "clamp(80px, 15vw, 150px)",
+        paddingTop: "clamp(20px, 8vw, 60px)",
         minHeight: "100vh",
         background: "#000",
         color: "#fff",

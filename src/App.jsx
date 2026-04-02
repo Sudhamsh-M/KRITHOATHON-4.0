@@ -7,6 +7,7 @@ import Timeline from './components/timeline/Timeline'
 import About from './components/About'
 import Footer from './components/Footer'
 import PastEditions from './components/PastEditions' // Make sure to create this file
+import Results from './components/Results'
 import './App.css'
 
 function App() {
@@ -43,19 +44,20 @@ function App() {
               <Timeline />
             </section>
 
-            <section id="results" style={{ minHeight: '40vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#0a0a0a', scrollMarginTop: '80px' }}>
-              <h2 style={{ color: '#666', fontFamily: 'sans-serif' }}>Results Section Coming Soon</h2>
+            <section id="past-editions" style={{ scrollMarginTop: '80px' }}>
+              <PastEditions />
             </section>
 
             <section id="about" style={{ scrollMarginTop: '80px' }}>
               <About />
             </section>
 
-            <section id="past-editions" style={{ scrollMarginTop: '80px' }}>
-              <PastEditions />
-            </section>
+            
           </>
         } />
+
+        {/* RESULTS PAGE */}
+        <Route path="/results" element={<Results />} />
       </Routes>
 
       <Footer />

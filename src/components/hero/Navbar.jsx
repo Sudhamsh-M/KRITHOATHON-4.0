@@ -50,7 +50,7 @@ export default function Navbar() {
 
                   <ul className="dropdown-menu">
                     <li><a href="/#timeline">Timeline</a></li>
-                    <li><a href="/#results">Results</a></li>
+                    <li><a href="/results">Results</a></li>
                   </ul>
                 </li>
               )
@@ -118,7 +118,7 @@ export default function Navbar() {
                 {mobileDropdownOpen && (
                   <div className="mobile-dropdown-menu" style={{ paddingLeft: '1rem', display: 'flex', flexDirection: 'column', marginTop: '0.5rem', gap: '1rem' }}>
                     <a href="/#timeline" onClick={() => setMenuOpen(false)}>Timeline</a>
-                    <a href="/#results" onClick={() => setMenuOpen(false)}>Results</a>
+                    <a href="/results" onClick={() => setMenuOpen(false)}>Results</a>
                   </div>
                 )}
               </div>
