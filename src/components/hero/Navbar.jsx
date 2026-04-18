@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import WaitlistButton from './WaitlistButton'
 import './Navbar.css'
 
-const NAV_ITEMS = ['Home', 'Past Editions', 'Updates', 'About']
+const NAV_ITEMS = ['Home', 'Past Editions', 'Timeline', 'About']
 
 const ChevronDown = () => (
   <svg
@@ -47,11 +47,6 @@ export default function Navbar() {
                     {item}
                     <ChevronDown />
                   </button>
-
-                  <ul className="dropdown-menu">
-                    <li><a href="/#timeline">Timeline</a></li>
-                    <li><a href="/results">Results</a></li>
-                  </ul>
                 </li>
               )
             }

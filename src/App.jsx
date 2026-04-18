@@ -7,7 +7,6 @@ import Timeline from './components/timeline/Timeline'
 import About from './components/About'
 import Footer from './components/Footer'
 import PastEditions from './components/PastEditions' // Make sure to create this file
-import Results from './components/Results'
 import './App.css'
 
 function App() {
@@ -60,8 +59,7 @@ function App() {
           </>
         } />
 
-        {/* RESULTS PAGE */}
-        <Route path="/results" element={<Results />} />
+        {/* FUTURE ROUTES FOR SEPARATE PAGES (IF NEEDED) */}
       </Routes>
 
       <Footer />
